@@ -2,7 +2,7 @@
 # docker-compose --file docker-compose-linux.yml up
 version: '3'
 services:
-  jupyter-ros-xpra:
+  jupyter-ros:
     image: intel4coro/base-notebook:20.04-noetic
     build:
       context: ./
@@ -11,7 +11,6 @@ services:
     tty: true
     ports: 
       - 8888:8888
-    privileged: true
     # user: root
     user: jovyan
     working_dir: /home/jovyan
@@ -19,13 +18,13 @@ services:
     entrypoint: ["/home/jovyan/work/entrypoint.sh"]
     volumes:
       - ./:/home/jovyan/work
-    # environment:
-    #   - DISPLAY=:100
-    #   - NVIDIA_DRIVER_CAPABILITIES=all
-    # deploy:
-    #   resources:
-    #     reservations:
-    #       devices:
-    #         - driver: nvidia
-    #           count: all
-    #           capabilities: [gpu]
+    environment:
+      - DISPLAY
+      - NVIDIA_DRIVER_CAPABILITIES=all
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]

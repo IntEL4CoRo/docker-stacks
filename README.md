@@ -1,15 +1,23 @@
 # Base docker image for robotics programming on Jupyterhub/Binderhub
 
-`intel4coro/base-notebook:20.04-noetic` is  a ready-to-run Docker image based on offical jupyter image [jupyter/minimal-notebook:ubuntu-20.04](https://hub.docker.com/layers/jupyter/minimal-notebook/ubuntu-20.04/images/sha256-a2d9cec8c5d373e073859adc67b6bc89a6f1b60f7cdfbfa024d6bc911a1c56fa?context=explore),  containing:
+[![](https://img.shields.io/docker/v/intel4coro/base-notebook.svg)](https://hub.docker.com/r/intel4coro/base-notebook/tags)
+[![Binder](https://binder.intel4coro.de/badge_logo.svg)](https://binder.intel4coro.de/v2/gh/IntEL4CoRo/docker-stacks.git/master)
+
+`intel4coro/base-notebook:noetic` is  a ready-to-run Docker image based on offical jupyter image [jupyter/minimal-notebook:ubuntu-20.04](https://hub.docker.com/layers/jupyter/minimal-notebook/ubuntu-20.04/images/sha256-a2d9cec8c5d373e073859adc67b6bc89a6f1b60f7cdfbfa024d6bc911a1c56fa?context=explore), pre-installed:
 
 - [ros-noetic-desktop-full](http://wiki.ros.org/noetic/Installation/Ubuntu)
-- [XPRA Remote Desktop](https://github.com/Xpra-org/xpra)
+- [VNC Remote Desktop](https://github.com/jupyterhub/jupyter-remote-desktop-proxy)
+- [VScode server](https://github.com/coder/code-server)
 - [Oh-my-bash](https://github.com/ohmybash/oh-my-bash)
 - [Robot Web Tools](https://robotwebtools.github.io/)
 
 ## Live Demo
 
 [![Binder](https://binder.intel4coro.de/badge_logo.svg)](https://binder.intel4coro.de/v2/gh/IntEL4CoRo/docker-stacks.git/master)
+
+## Usage
+
+https://github.com/IntEL4CoRo/binder-template
 
 ## Development
 
